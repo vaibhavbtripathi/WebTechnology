@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- //<meta charset="UTF-8">
+    //<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Web To Lead Form</title> 
+    <link rel="stylesheet" href="basic.css">
+    <script src="basicjs.js"></script>
+</head>
+<body>
+
+   <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHp000003UsMi" method="POST" onsubmit="savedata()">
+    
+    <input type=hidden name="oid" value="00DHp000003UsMi">
+    <input type=hidden name="retURL" value="">
+    <input type=hidden name="Lead_Date__c" class="outputdate"> 
+    <!-- we have to add one more hodden field as lead date is custom field. -->
+    
+    <h1>Create Lead</h1>
+    
+    <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true"/><br>
+    
+    <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true" /><br>
+    
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" required="true" /><br>
+    
+    <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" required="true" /><br>
+
+    <label for="LeadDate">Lead Date</label><input type="date" required="true" class="inputdate">
+    
+    <input type="submit" name="submit" class="submit">
+    
+    </form>
+       
+</body>
+</html>
